@@ -1,10 +1,10 @@
 module github.com/iooikaak/pb
 
-go 1.22
+go 1.21
 
 require (
 	github.com/golang/protobuf v1.5.2
-	github.com/iooikaak/frame v0.0.0-20240222112227-92256e7348b9
+	github.com/iooikaak/frame v0.0.0-20240222150429-22cd4d3985bc
 	github.com/olivere/elastic v6.2.37+incompatible
 	github.com/opentracing/opentracing-go v1.2.0
 	golang.org/x/net v0.21.0
@@ -64,5 +64,6 @@ require (
 
 replace (
 	github.com/coreos/bbolt v1.3.6 => go.etcd.io/bbolt v1.3.6
+	github.com/iooikaak/frame v0.0.0-20240222112227-92256e7348b9 => ../frame
 	google.golang.org/grpc v1.49.0 => google.golang.org/grpc v1.26.0
 )
