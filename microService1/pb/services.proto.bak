@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pb_microService1;
+
+import "microService1.proto";
+
+message Omit {
+  int32 errcode = 1;
+}
+
+// stream 作为请求参数：OPEN API 无需认证
+// stream 作为响应：内网API
+// 无stream：APP
+// 同时出现在请求和响应：只能服务间RPC访问
+
+service microService1 {
+  rpc GetUserInfo ( GetUserInfoReq) returns (GetUserInfoRep) {}
+  rpc RpcGetUserInfo (stream RpcGetUserInfoReq) returns (GetUserInfoRep) {}
+}

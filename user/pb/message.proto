@@ -1,0 +1,22 @@
+syntax = "proto3"; // 指定proto版本
+package user;
+
+enum MessageType {
+  MT_OMIT = 0;
+  MT_USER_LOGIN = 1;
+  MT_USER_LOGOUT = 2;
+  MT_USER_MODIFY_INFO = 3;
+  MT_USER_UPLOAD_LOCATION = 4;
+  MT_USER_BIND_OR_UNBIND_GAMES = 5;
+}
+
+message InteralMsg {
+  MessageType mt = 1;
+  int64 uid = 2;
+  int64 t = 3;
+  string m = 4;
+}
+
+message UserOnline {
+  int64 user_id = 1;
+}
