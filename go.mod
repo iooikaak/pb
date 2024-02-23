@@ -64,5 +64,6 @@ require (
 
 replace (
 	github.com/coreos/bbolt v1.3.6 => go.etcd.io/bbolt v1.3.6
+	github.com/iooikaak/frame v0.0.0-20240222112227-92256e7348b9 => ../frame
 	google.golang.org/grpc v1.49.0 => google.golang.org/grpc v1.26.0
 )
